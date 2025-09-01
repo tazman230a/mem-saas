@@ -1,5 +1,5 @@
 import CompanionForm from "@/components/CompanionForm"
-import { newCompanionPermission } from "@/lib/actions/companion.actions";
+
 import {auth} from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import Image from "next/image"
@@ -37,3 +37,8 @@ const NewCompanion = async () => {
 }
 
 export default NewCompanion
+
+async function newCompanionPermission(): Promise<boolean> {
+    // TODO: Replace with actual permission logic
+    return true;
+}
